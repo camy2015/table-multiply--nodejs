@@ -4,12 +4,17 @@
   "description": "Table of multiply",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
   },
   "author": "Cesar Augusto Gonzalez Rojas",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",
-    "yargs": "^17.7.2"
+    "yargs": "^18.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
   }
 }

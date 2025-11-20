@@ -1,4 +1,8 @@
-const { argv } = require("yargs")
+import yargs from "yargs";
+import { hideBin } from "yargs/helpers";
+const argv = yargs(hideBin(process.argv)).parse();
+
+yargs()
   .options({
     b: {
       alias: "base",
@@ -33,6 +37,4 @@ const { argv } = require("yargs")
     return true;
   });
 
-module.exports = {
-  argv,
-};
+export { argv };

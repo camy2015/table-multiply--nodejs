@@ -11,7 +11,7 @@ const createFile = async (base, list = false, untill) => {
       printTable += `${base} ${"x".green} ${i} ${"=".green} ${result}\n`;
     }
 
-    fs.writeFileSync(`./output/table-${base}.txt`, output);
+    fs.writeFileSync(`./src/output/table-${base}.txt`, output);
     const resp = `table-${base}.txt created`;
 
     if (list) {
