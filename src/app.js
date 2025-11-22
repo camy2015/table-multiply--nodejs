@@ -1,4 +1,4 @@
-const { argv } = require("./config/yargs");
+const { argv } = require("./config/yargs").default;
 const { createFile } = require("./helpers/multiply");
 
 require("colors");

@@ -37,4 +37,4 @@ yargs()
     return true;
   });
 
-export { argv };
+export default { argv };
