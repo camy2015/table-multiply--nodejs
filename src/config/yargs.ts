@@ -1,8 +1,7 @@
 import yargs from "yargs";
 import { hideBin } from "yargs/helpers";
-const argv = yargs(hideBin(process.argv)).parse();
 
-yargs()
+export const argv = yargs(hideBin(process.argv))
   .options({
     b: {
       alias: "base",
@@ -13,15 +12,26 @@ yargs()
     l: {
       alias: "list",
       type: "boolean",
-      demandOption: true,
       default: false,
       describe: "Return table of multiply",
     },
     u: {
       alias: "until",
       type: "number",
-      demandOption: true,
+      default: 10,
       describe: "Max number",
+    },
+    n: {
+      alias: "name",
+      type: "string",
+      default: "table",
+      describe: "File name",
+    },
+    d: {
+      alias: "destination",
+      type: "string",
+      default: "./output",
+      describe: "Folder destination",
     },
   })
   .check((argv) => {
@@ -35,6 +45,5 @@ yargs()
       throw "The untill has been a number";
     }
     return true;
-  });
-
-export default { argv };
+  })
+  .parseSync();
