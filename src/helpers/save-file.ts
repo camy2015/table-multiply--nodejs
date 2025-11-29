@@ -1,17 +1,17 @@
 import fs from "fs";
 
-interface SaveFileProps {
+export interface SaveFileExecute {
   execute: (options: OptionsFile) => boolean;
 }
 
-interface OptionsFile {
+export interface OptionsFile {
   base: number;
   fileContent: string;
   folderDestination?: string;
   fileName?: string;
 }
 
-export class SaveFile implements SaveFileProps {
+export class SaveFile implements SaveFileExecute {
   constructor() {}
   execute({
     base,
@@ -28,7 +28,7 @@ export class SaveFile implements SaveFileProps {
 
       return true;
     } catch (error) {
-      console.error(error);
+      //console.log(error);
       return false;
     }
   }

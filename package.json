@@ -5,7 +5,9 @@
   "description": "Table of multiply",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest --watch",
+    "test:coverage": "jest --coverage",
     "dev": "ts-node src/app.ts",
     "dev:nodemon": "nodemon",
     "build": "rimraf ./dist && tsc",
@@ -18,10 +20,14 @@
     "yargs": "^18.0.0"
   },
   "devDependencies": {
+    "@jest/globals": "^30.2.0",
     "@types/node": "^24.10.1",
     "@types/yargs": "^17.0.35",
+    "jest": "^30.2.0",
     "nodemon": "^3.1.11",
     "rimraf": "^6.1.2",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }

@@ -2,7 +2,7 @@ import colors from "colors";
 import { CreateTable } from "../helpers/create-table.ts";
 import { SaveFile } from "../helpers/save-file.ts";
 
-interface PropsServerApp {
+export interface PropsServerApp {
   base: number;
   showList: boolean;
   untill: number;

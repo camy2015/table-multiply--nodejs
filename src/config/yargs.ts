@@ -30,7 +30,7 @@ export const argv = yargs(hideBin(process.argv))
     d: {
       alias: "destination",
       type: "string",
-      default: "./output",
+      default: "output",
       describe: "Folder destination",
     },
   })

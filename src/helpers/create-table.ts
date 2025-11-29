@@ -1,13 +1,13 @@
 import colors from "colors";
 
-interface CreateTableExecute {
+export interface CreateTableExecute {
   execute: (options: PropsCreateTable) => {
     output: string;
     printTable: string;
   };
 }
 
-interface PropsCreateTable {
+export interface PropsCreateTable {
   base: number;
   untill?: number | undefined;
 }
